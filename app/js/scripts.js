@@ -1,8 +1,4 @@
-﻿// function validate_form(){
-// 	event.preventDefault();
-// 	console.log(this);
-// }
-
+﻿
 function regform_submit(){
 	valid = false;
 	var fields = document.getElementsByClassName('reg-form__input');
