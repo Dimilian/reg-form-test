@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>redmadrobot_test</title>
+	<link rel="stylesheet" href="app/css/main.css">
+
+	<!--  prod version
+	<link rel="stylesheet" href="app/css/main.min.css"> 
+	-->
+</head>
+<body >
+
+	<form name="reg-form" class="reg-form" onsubmit="return regform_submit()">
+		<span class="reg-form__title">Registration</span>
+
+		<div class="row">
+			<div class="col s4">
+				<label class="reg-form__label">Name</label>
+				<input type="text" class="reg-form__input" name="name" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_top col s12"> 
+					    Not valid field
+					</div>
+				</div>
+			</div>
+			<div class="col s4">
+				<label class="reg-form__label">Second Name</label>
+				<input type="text" class="reg-form__input" name="second-name" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_top col s12"> 
+					    Not valid field
+					</div>
+				</div>
+			</div>
+			<div class="col s4">
+				<label class="reg-form__label">Surname</label>
+				<input type="text" class="reg-form__input" name="surname" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_top col s12"> 
+					    Not valid field
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s6">
+				<label class="reg-form__label">Email</label>
+				<input type="text" class="reg-form__input" name="email" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_left col s12"> 
+					    Not valid email!
+					</div>
+				</div>
+			</div>
+			<div class="col s6">
+				<label class="reg-form__label">Phone</label>
+				<input type="text" class="reg-form__input" name="phone" onblur="validate(this)";></input>
+				<div class="tooltip">
+					<div class="tooltip_right col s12"> 
+					    Wrong phone
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s4">
+				<label class="reg-form__label">Login</label>
+				<input type="text" class="reg-form__input" name="login" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_bottom col s12"> 
+					    Not valid field
+					</div>
+				</div>
+			</div>
+			<div class="col s4">
+				<label class="reg-form__label">Password</label>
+				<input type="password" class="reg-form__input reg-form__input_password" name="password" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_top col s12"> 
+					    Unsecured password
+					</div>
+				</div>
+			</div>
+			<div class="col s4">
+				<label class="reg-form__label">Confirm password</label>
+				<input type="password" class="reg-form__input" name="confirmpassword" onblur="validate(this);"></input>
+				<div class="tooltip">
+					<div class="tooltip_bottom col s12"> 
+					    Confirm your password
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col s12">
+				<button type="submit" class="reg-form__btn" >Submit</button>
+			</div>
+		</div>
+	</form>
+
+	<!-- <script type="text/javascript" src="app/js/scripts.min.js"></script> -->
+	<script type="text/javascript" src="app/js/scripts.js"></script>
+
+</body>
+</html>

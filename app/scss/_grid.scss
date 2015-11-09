@@ -1,0 +1,49 @@
+
+$num-cols : 12;
+$gutter-width: 1.5rem;
+
+@mixin box-sizing($box-sizing) {
+  -webkit-box-sizing: $box-sizing;
+    -moz-box-sizing: $box-sizing;
+    box-sizing: $box-sizing;
+}
+
+.container{
+	max-width: 940px;
+	width: 90%;
+}
+
+.row {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .col{
+  	float: left;
+  	@include box-sizing(border-box);
+  	padding: 0 $gutter-width / 2;
+
+  	$i: 1;
+  	@while $i <= $num-cols {
+  	  $perc: unquote((100 / ($num-cols / $i)) + "%");
+  	  &.s#{$i} {
+  	    width: $perc;
+  	    margin-left: 0;
+  	  }
+  	  $i: $i + 1;
+  	}
+  	$i: 1;
+  	@while $i <= $num-cols {
+  	  $perc: unquote((100 / ($num-cols / $i)) + "%");
+  	  &.offset-s#{$i} {
+  	    margin-left: $perc;
+  	  }
+  	  $i: $i + 1;
+  	}
+  }
+}
+
